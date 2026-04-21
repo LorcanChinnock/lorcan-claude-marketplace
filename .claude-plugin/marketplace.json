@@ -31,7 +31,7 @@
     {
       "name": "pr-description",
       "source": "./plugins/pr-description",
-      "description": "Generate a cohesive PR description and conventional-commits title from the raw diff vs base. Gathers git context, asks clarifying questions before writing, enforces a humanised prose style, and includes Mermaid diagrams where they add information.",
+      "description": "Write a conventional-commits title and PR description for the current branch. Reads the raw diff vs base, asks only what the diff cannot answer, enforces humanised prose, and adds a Mermaid diagram where it helps. Never pushes, commits, or opens a PR.",
       "author": {
         "name": "Lorcan Chinnock",
         "email": "ljchinnock@gmail.com"
