@@ -1,0 +1,9 @@
+{
+  "name": "code-reviewer",
+  "version": "0.1.0",
+  "description": "Rigorous multi-agent code review for local branch changes or a GitHub PR. Confidence-ranked findings, no GitHub mutations.",
+  "author": {
+    "name": "Lorcan Chinnock",
+    "email": "ljchinnock@gmail.com"
+  }
+}

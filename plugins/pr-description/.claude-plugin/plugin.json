@@ -1,0 +1,9 @@
+{
+  "name": "pr-description",
+  "version": "0.1.0",
+  "description": "Generate a cohesive PR description and conventional-commits title from the raw diff. Gathers git context, asks clarifying questions before writing, enforces a humanised prose style, and includes Mermaid diagrams where they help.",
+  "author": {
+    "name": "Lorcan Chinnock",
+    "email": "ljchinnock@gmail.com"
+  }
+}

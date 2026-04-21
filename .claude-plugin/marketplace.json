@@ -1,12 +1,44 @@
 {
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "lorcan-claude-marketplace",
+  "description": "Lorcan's personal Claude Code plugin marketplace",
   "owner": {
     "name": "Lorcan Chinnock",
     "email": "ljchinnock@gmail.com"
   },
-  "metadata": {
-    "description": "Lorcan's personal Claude Code plugin marketplace",
-    "version": "0.1.0"
-  },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "code-reviewer",
+      "source": "./plugins/code-reviewer",
+      "description": "Rigorous multi-agent code review for local branch changes or a GitHub PR. Confidence-ranked findings, no GitHub mutations.",
+      "author": {
+        "name": "Lorcan Chinnock",
+        "email": "ljchinnock@gmail.com"
+      },
+      "category": "productivity",
+      "homepage": "https://github.com/LorcanChinnock/lorcan-claude-marketplace/tree/main/plugins/code-reviewer"
+    },
+    {
+      "name": "simplify-hub",
+      "source": "./plugins/simplify-hub",
+      "description": "Hub-and-spoke code simplifier for local code. User picks scope (branch diff, staged, working tree, or paths). Extracts functional + non-functional contract, dispatches specialised Sonnet spokes, validates, scores, then applies — or proposes only in plan mode.",
+      "author": {
+        "name": "Lorcan Chinnock",
+        "email": "ljchinnock@gmail.com"
+      },
+      "category": "productivity",
+      "homepage": "https://github.com/LorcanChinnock/lorcan-claude-marketplace/tree/main/plugins/simplify-hub"
+    },
+    {
+      "name": "pr-description",
+      "source": "./plugins/pr-description",
+      "description": "Generate a cohesive PR description and conventional-commits title from the raw diff vs base. Gathers git context, asks clarifying questions before writing, enforces a humanised prose style, and includes Mermaid diagrams where they add information.",
+      "author": {
+        "name": "Lorcan Chinnock",
+        "email": "ljchinnock@gmail.com"
+      },
+      "category": "productivity",
+      "homepage": "https://github.com/LorcanChinnock/lorcan-claude-marketplace/tree/main/plugins/pr-description"
+    }
+  ]
 }
