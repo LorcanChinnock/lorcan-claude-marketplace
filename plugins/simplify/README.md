@@ -1,16 +1,16 @@
-# simplify-hub
+# simplify
 
 Hub-and-spoke code simplifier for local code. Extracts the functional + non-functional contract first, dispatches specialised spokes in parallel, validates every proposal against the contract, then applies the survivors.
 
 ## Install
 
 ```
-/plugin install simplify-hub@lorcan-claude-marketplace
+/plugin install simplify@lorcan-claude-marketplace
 ```
 
 ## Invoke
 
-The plugin registers a `simplify-hub` agent. Pass a scope argument:
+The plugin registers a `simplify` agent. Pass a scope argument:
 
 - `branch` — current branch diff vs its base (default).
 - `staged` — staged changes only.

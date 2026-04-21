@@ -19,15 +19,15 @@
       "homepage": "https://github.com/LorcanChinnock/lorcan-claude-marketplace/tree/main/plugins/code-reviewer"
     },
     {
-      "name": "simplify-hub",
-      "source": "./plugins/simplify-hub",
+      "name": "simplify",
+      "source": "./plugins/simplify",
       "description": "Hub-and-spoke code simplifier for local code. User picks scope (branch diff, staged, working tree, or paths). Extracts functional + non-functional contract, dispatches specialised Sonnet spokes, validates, scores, then applies — or proposes only in plan mode.",
       "author": {
         "name": "Lorcan Chinnock",
         "email": "ljchinnock@gmail.com"
       },
       "category": "productivity",
-      "homepage": "https://github.com/LorcanChinnock/lorcan-claude-marketplace/tree/main/plugins/simplify-hub"
+      "homepage": "https://github.com/LorcanChinnock/lorcan-claude-marketplace/tree/main/plugins/simplify"
     },
     {
       "name": "pr-description",

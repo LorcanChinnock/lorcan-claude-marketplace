@@ -1,5 +1,5 @@
 {
-  "name": "simplify-hub",
+  "name": "simplify",
   "version": "0.1.0",
   "description": "Hub-and-spoke orchestrator that aggressively simplifies local code — staged changes, branch diff vs base, or specified paths — while validating every proposal against the extracted functional and non-functional contract. Applies on run, proposes in plan mode.",
   "author": {

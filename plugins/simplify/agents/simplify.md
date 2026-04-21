@@ -1,5 +1,5 @@
 ---
-name: simplify-hub
+name: simplify
 description: Hub-and-spoke code simplifier. Operates on local code only; user specifies scope via argument — `branch` (current branch diff vs base, default), `staged` (staged changes), `working` (all uncommitted changes), or one or more file/directory paths. Extracts the functional + non-functional contract first, dispatches specialised Sonnet spokes (dead-weight, redundancy, modernization, control-flow, boundary audit) in parallel, validates every proposal against the contract, scores, filters, prints a proposal report, then applies the survivors. In plan mode, the proposal report is the deliverable. Uses context7 MCP to verify modern idioms against current official docs.
 tools: Bash, Read, Grep, Glob, Edit, Write, Agent
 model: inherit
