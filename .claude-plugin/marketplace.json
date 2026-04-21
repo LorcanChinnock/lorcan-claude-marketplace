@@ -49,6 +49,17 @@
       },
       "category": "productivity",
       "homepage": "https://github.com/LorcanChinnock/lorcan-claude-marketplace/tree/main/plugins/humanizer"
+    },
+    {
+      "name": "author-plugin",
+      "source": "./plugins/author-plugin",
+      "description": "Generate a Claude Code plugin from a plain-English requirement. Picks the right surfaces (skills, subagents, commands, hooks, MCP servers, reference docs), scaffolds files, checks them against a deterministic rubric, returns a fresh-context reviewer verdict, and proposes a marketplace.json diff.",
+      "author": {
+        "name": "Lorcan Chinnock",
+        "email": "ljchinnock@gmail.com"
+      },
+      "category": "productivity",
+      "homepage": "https://github.com/LorcanChinnock/lorcan-claude-marketplace/tree/main/plugins/author-plugin"
     }
   ]
 }
