@@ -1,5 +1,4 @@
 {
-  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "lorcan-claude-marketplace",
   "description": "Lorcan's personal Claude Code plugin marketplace",
   "owner": {
@@ -39,6 +38,17 @@
       },
       "category": "productivity",
       "homepage": "https://github.com/LorcanChinnock/lorcan-claude-marketplace/tree/main/plugins/pr-description"
+    },
+    {
+      "name": "humanizer",
+      "source": "./plugins/humanizer",
+      "description": "Rewrite text to remove signs of AI-generated writing. Catches inflated significance, promotional language, em-dash overuse, AI vocabulary, bolded-header bullets, sycophantic openers, and more. Works on pasted text or files in place.",
+      "author": {
+        "name": "Lorcan Chinnock",
+        "email": "ljchinnock@gmail.com"
+      },
+      "category": "productivity",
+      "homepage": "https://github.com/LorcanChinnock/lorcan-claude-marketplace/tree/main/plugins/humanizer"
     }
   ]
 }
