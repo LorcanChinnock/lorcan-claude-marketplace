@@ -105,22 +105,6 @@ Methodology:
 
 **Never** add `hooks`, `mcpServers`, or `permissionMode` to agent frontmatter — Claude Code rejects these in plugin agents. Settings that would use them belong in `.claude/settings.json` in the harness, not in the plugin.
 
-## commands/\<name>.md
-
-```markdown
----
-description: <one-line summary for the command palette>
----
-
-<Instruction text the model reads when the user types `/<name> <args>`.>
-
-Arguments (optional):
-- `<arg-1>`: <meaning>
-- `<arg-2>`: <meaning>
-```
-
-If you need more than a screen of instruction here, you want a skill instead.
-
 ## hooks/hooks.json
 
 ```json
@@ -198,11 +182,13 @@ Link from SKILL.md with `[REFERENCE.md](REFERENCE.md)` — never `@REFERENCE.md`
 
 ## Invoke
 
+Ask for it in conversation (the skill's `description` drives auto-match), or invoke explicitly:
+
 \`\`\`
-/<kebab-name>
+/<plugin-name>:<skill-name>
 \`\`\`
 
-<One paragraph on how to invoke + argument shapes.>
+<One paragraph on argument shapes if relevant.>
 
 ## What it does
 

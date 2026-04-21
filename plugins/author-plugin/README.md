@@ -10,21 +10,23 @@ Generate a Claude Code plugin from a plain-English requirement. Picks the right 
 
 ## Invoke
 
+Ask for it in conversation (the skill auto-matches on description), or invoke explicitly:
+
 ```
-/author-plugin
+/author-plugin:author-plugin
 ```
 
-Or pass a free-form requirement inline: `/author-plugin a plugin that formats dates`. The skill asks a short batched intake if the requirement is under-specified.
+Or pass a free-form requirement inline: `/author-plugin:author-plugin a plugin that formats dates`. The skill asks a short batched intake if the requirement is under-specified.
 
 ## What it does
 
 - Preflights for a name collision in `plugins/`.
 - Asks one batched intake covering problem, triggers, integrations, delegation, and TDD opt-in.
-- Chooses surfaces from `SURFACES.md` — skill by default, subagents for fresh-context work, commands only when a literal `/name args` matters, hooks only for reactive automation, MCP only for external stdio bridges.
+- Chooses surfaces from `SURFACES.md` — skill by default (skills cover the slash-command entry point too), subagents for fresh-context work, hooks only for reactive automation, MCP only for external stdio bridges.
 - Writes `plugin.json`, `README.md`, and every chosen surface from `TEMPLATES.md`.
 - Runs a deterministic self-check: JSON/YAML parse, name regex, forbidden agent fields (`hooks`/`mcpServers`/`permissionMode`), description-as-trigger rule, word budgets.
 - Proposes a `marketplace.json` diff and writes it on your confirmation.
-- Dispatches the `plugin-reviewer` sub-agent in fresh context for an unbiased `KEEP` / `REVISE` / `BLOCK` verdict.
+- Runs the `review-plugin` sub-agent in fresh context for an unbiased `KEEP` / `REVISE` / `BLOCK` verdict.
 - Optional TDD loop (see `TDD.md`) if you opt in at intake.
 - Prints a final report with files created, reviewer verdict, and a suggested commit message.
 

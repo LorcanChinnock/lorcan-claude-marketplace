@@ -10,7 +10,6 @@ Authoritative guide for which Claude Code surface a requirement needs. Skills ar
 | Work benefits from fresh context (review, audit) | **Subagent** |
 | Work needs a strictly limited toolset | **Subagent** |
 | Multiple independent spokes run in parallel | **Subagent** (per spoke) |
-| Literal `/name args` UX matters (user types the command itself) | **Slash command** |
 | Runs reactively on an event (file save, tool call, prompt submit) | **Hook** |
 | Bridges an external system over stdio JSON-RPC | **MCP server** |
 | Language intelligence (symbols, rename, refs) | **LSP server** |
@@ -22,7 +21,7 @@ If two surfaces could work, default to the simpler one. A skill that calls a sub
 
 ## Skill (default)
 
-**Use when** the user triggers the capability by asking for it in conversation, and the plugin is mostly prose + workflow steps. Skills can load reference `.md` files lazily.
+**Use when** the user triggers the capability by asking for it in conversation, or by typing `/<plugin>:<skill>` explicitly. Skills cover the slash-command entry point that used to live in `commands/` — the two are merged, and skills are preferred for new work. Skills can load reference `.md` files lazily.
 
 **Layout**
 ```
@@ -47,6 +46,7 @@ allowed-tools:
 
 **Gotchas**
 - The `description` is the trigger. Treat it like an index entry, not a summary.
+- Plugin skills are always namespaced: invoke as `/<plugin>:<skill>`, not `/<skill>`. Document this in the plugin README.
 - Do not `@`-link reference files — that force-loads them. Use plain markdown links so they load on demand.
 - Keep SKILL.md under 500 words. Heavy content goes to uppercase `.md` siblings.
 
@@ -78,23 +78,6 @@ color: purple
 - `tools` is a comma-separated string, not a YAML list.
 - `model: inherit` is the right default for orchestrated sub-agents; name the model when cost matters (Haiku for cheap gates, Sonnet for serious work).
 - Keep the body in plain second-person ("You are …") — matches the house style.
-
----
-
-## Slash command
-
-**Use when** the user types the literal command themselves and the argument shape matters. Prefer a skill if the trigger is conversational ("can you review this?").
-
-**Layout**
-```
-commands/<name>.md
-```
-
-The body is the instruction text; the filename is the command.
-
-**Gotchas**
-- No frontmatter beyond optional `description`.
-- If you find yourself adding lots of supporting files, you actually want a skill.
 
 ---
 
@@ -181,9 +164,8 @@ hooks/hooks.json
 requirement
 ├── reactive on an event?  → hook (exit-code-2 to block)
 ├── bridges external system via stdio JSON-RPC?  → MCP server
-├── user types `/name args` literally and shape matters?  → slash command
 ├── needs fresh context / restricted tools / parallel spokes?  → subagent
-├── conversational trigger, prose + workflow?  → skill (default)
+├── user-invoked prose + workflow (conversational OR `/plugin:skill`)?  → skill (default)
 └── supporting reference >200 lines?  → uppercase .md, lazily linked from SKILL.md
 ```
 

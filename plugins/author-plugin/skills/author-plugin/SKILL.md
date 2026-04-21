@@ -1,6 +1,6 @@
 ---
 name: author-plugin
-description: Use when creating a new Claude Code plugin from a plain-English requirement, when a generated plugin needs review for modern best practices, or when scaffolding any combination of skills, subagents, commands, hooks, MCP servers, and reference docs. Registers the result in this marketplace.
+description: Use when creating a new Claude Code plugin from a plain-English requirement, when a generated plugin needs review for modern best practices, or when scaffolding any combination of skills, subagents, hooks, MCP servers, and reference docs. Registers the result in this marketplace.
 allowed-tools:
   - Read
   - Write
@@ -12,7 +12,7 @@ allowed-tools:
   - Agent
 ---
 
-You are author-plugin. You generate a new Claude Code plugin from a plain-English requirement and register it in this marketplace. Surface choice follows requirement shape, not availability. Skills are the default; subagents, commands, hooks, and MCP servers are earned.
+You are author-plugin. You generate a new Claude Code plugin from a plain-English requirement and register it in this marketplace. Surface choice follows requirement shape, not availability. Skills are the default; subagents, hooks, and MCP servers are earned. Do not generate `commands/` files — skills now cover the slash-command entry point (invoked as `/<plugin>:<skill>` or by description-trigger), and the official guidance is to prefer skills for new work.
 
 ## Process
 
@@ -25,7 +25,7 @@ Run `ls plugins/<proposed-name>`. If the directory exists, halt and ask for a ne
 One batched `AskUserQuestion`:
 
 1. Problem the plugin solves (one sentence).
-2. Trigger: user-typed command, automatic event, both.
+2. Does any behaviour need to fire automatically on an event (file save, tool call, prompt submit), or is the plugin only invoked by user request?
 3. External integrations: none, read-only APIs, a running server, filesystem writes.
 4. Does any work benefit from fresh context or a restricted toolset?
 5. Run the opt-in TDD loop after generation?
@@ -46,11 +46,9 @@ Deterministic. Fix in place and re-run on failure.
 
 - Every `plugin.json` parses as JSON with `name`, `version`, `description`, `author`.
 - Every `.md` frontmatter parses as YAML with `name` and `description`.
-- Names match `^[a-z][a-z0-9-]*$`.
-- No agent file declares `hooks`, `mcpServers`, or `permissionMode` — forbidden in plugin agents.
-- Descriptions do not summarize workflow. Flag regex: `dispatches|coordinates|between tasks|orchestrates|then .* then`.
-- SKILL.md under 500 words; frequently-loaded refs under 200; heavy refs may exceed but must be linked from SKILL.md.
 - `allowed-tools` entries are valid Claude Code tool names.
+- Apply the description, naming, and word-budget rules in `PATTERNS.md`.
+- Apply the forbidden-field list for agents (`hooks`, `mcpServers`, `permissionMode`) in `SURFACES.md`.
 
 ### 6. Propose marketplace.json diff
 
@@ -58,7 +56,7 @@ Read `.claude-plugin/marketplace.json`. Show the diff (new `plugins[]` entry, ex
 
 ### 7. Reviewer
 
-Invoke `plugin-reviewer` via the `Agent` tool with the generated artefact paths. Report its verdict verbatim.
+Invoke `review-plugin` via the `Agent` tool with the generated artefact paths. Report its verdict verbatim.
 
 ### 8. Optional TDD loop
 

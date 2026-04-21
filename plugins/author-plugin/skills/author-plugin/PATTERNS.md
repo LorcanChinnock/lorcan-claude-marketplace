@@ -28,7 +28,7 @@ These describe the *inside* of the skill, not its *outside*. They waste tokens a
 
 **After**
 
-> `description: Use when creating a new Claude Code plugin from a plain-English requirement, or when a generated plugin needs review. Scaffolds skills, subagents, commands, hooks, MCP servers, and reference docs.`
+> `description: Use when creating a new Claude Code plugin from a plain-English requirement, or when a generated plugin needs review. Scaffolds skills, subagents, hooks, MCP servers, and reference docs.`
 
 ## Token budgets
 
