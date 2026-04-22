@@ -45,17 +45,6 @@ git clone https://github.com/LorcanChinnock/lorcan-claude-marketplace.git
 - [`humanize-text`](plugins/humanize-text) — rewrite text to remove signs of AI-generated writing: inflated significance, promotional language, em-dash overuse, AI vocabulary, bolded-header bullets, sycophantic openers.
 - [`handle-review`](plugins/handle-review) — structured workflow for responding to code review or other critical feedback. Enforces verify-before-implement, reasoned push-back, one-item-at-a-time execution, and no performative agreement.
 
-## Layout
-
-```
-.claude-plugin/marketplace.json   # marketplace manifest
-plugins/<plugin-name>/            # each plugin lives here
-  .claude-plugin/plugin.json      # plugin manifest
-  skills/<name>/SKILL.md          # user- or model-invoked skills
-  agents/<name>.md                # specialised sub-agents
-  hooks/ .mcp.json                # optional
-```
-
 Register each new plugin by adding an entry to the `plugins` array in `.claude-plugin/marketplace.json`.
 
 ## License
