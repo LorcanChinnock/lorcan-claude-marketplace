@@ -60,6 +60,17 @@
       },
       "category": "productivity",
       "homepage": "https://github.com/LorcanChinnock/lorcan-claude-marketplace/tree/main/plugins/author-plugin"
+    },
+    {
+      "name": "handle-review",
+      "source": "./plugins/handle-review",
+      "description": "Use when responding to code review or other critical feedback (PR comments, design review, written critique). Enforces verify-before-implement, reasoned push-back, one-item-at-a-time execution, and no performative agreement. Includes read-only gh helpers for PR context.",
+      "author": {
+        "name": "Lorcan Chinnock",
+        "email": "ljchinnock@gmail.com"
+      },
+      "category": "productivity",
+      "homepage": "https://github.com/LorcanChinnock/lorcan-claude-marketplace/tree/main/plugins/handle-review"
     }
   ]
 }
