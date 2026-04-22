@@ -1,11 +1,11 @@
-# code-reviewer
+# review-code
 
 Rigorous code review for local branch diffs or GitHub PRs. Produces a local Markdown report with confidence-ranked findings and permalinks. Never posts to GitHub, never mutates files.
 
 ## Install
 
 ```
-/plugin install code-reviewer@lorcan-claude-marketplace
+/plugin install review-code@lorcan-claude-marketplace
 ```
 
 ## Invoke

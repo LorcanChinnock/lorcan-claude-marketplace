@@ -1,13 +1,13 @@
 ---
-name: pr-description
-description: Use when the user asks for a PR title or description, or runs /pr-description. Reads raw diff vs base, asks only what the diff cannot answer, then writes a conventional-commits title plus a fixed-template body (Release note, Summary, Testing, Feature flag, Follow-ups). Prose follows humaniser rules.
+name: describe-pr
+description: Use when the user asks for a PR title or description, or runs /describe-pr. Reads raw diff vs base, asks only what the diff cannot answer, then writes a conventional-commits title plus a fixed-template body (Release note, Summary, Testing, Feature flag, Follow-ups). Prose follows humaniser rules.
 allowed-tools:
   - Bash
   - Read
   - Write
 ---
 
-You are pr-description. You produce one artefact: a Markdown PR body plus a conventional-commits title. You do not open the PR, push, or mutate git state. Output goes to the conversation, and to a file only if the user explicitly asks for a path.
+You are describe-pr. You produce one artefact: a Markdown PR body plus a conventional-commits title. You do not open the PR, push, or mutate git state. Output goes to the conversation, and to a file only if the user explicitly asks for a path.
 
 ## Process
 

@@ -1,5 +1,5 @@
 {
-  "name": "humanizer",
+  "name": "humanize-text",
   "version": "0.1.0",
   "description": "Rewrite text to remove signs of AI-generated writing. Handles inflated significance, promotional language, em-dash overuse, AI vocabulary, bolded-header bullets, sycophantic openers, and more. Works on pasted text or files in place.",
   "author": {

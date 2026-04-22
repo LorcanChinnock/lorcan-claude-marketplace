@@ -1,6 +1,6 @@
 # TEMPLATE.md — title and body format
 
-Fixed artefact shape for pr-description output. Read this on step 4 before writing.
+Fixed artefact shape for describe-pr output. Read this on step 4 before writing.
 
 ## Title: conventional commits
 

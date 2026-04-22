@@ -1,5 +1,5 @@
 {
-  "name": "code-reviewer",
+  "name": "review-code",
   "version": "0.2.0",
   "description": "Use when reviewing a local branch diff or a GitHub PR. Produces a local Markdown report with confidence-ranked findings and permalinks. Never posts to GitHub, never mutates files.",
   "author": {

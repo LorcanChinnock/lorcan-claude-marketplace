@@ -1,6 +1,6 @@
-# Humanizer pattern catalogue
+# humanize-text pattern catalogue
 
-Reference for the humanizer skill. Read this when the compressed table in `SKILL.md` is not enough: long inputs, edge cases, or when the user asks why a specific change was made.
+Reference for the humanize-text skill. Read this when the compressed table in `SKILL.md` is not enough: long inputs, edge cases, or when the user asks why a specific change was made.
 
 Patterns are grouped by type. Numbering matches the compressed catalogue in `SKILL.md`.
 

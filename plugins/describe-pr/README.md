@@ -1,17 +1,17 @@
-# pr-description
+# describe-pr
 
 Write a conventional-commits title and PR description for the current branch. Reads the raw diff vs base, asks only what the diff cannot answer, then writes a humanised body with a Mermaid diagram where it helps.
 
 ## Install
 
 ```
-/plugin install pr-description@lorcan-claude-marketplace
+/plugin install describe-pr@lorcan-claude-marketplace
 ```
 
 ## Invoke
 
 ```
-/pr-description
+/describe-pr
 ```
 
 Or ask in conversation ("write a PR description for this branch"). Both routes run the same skill on the current branch against its base.

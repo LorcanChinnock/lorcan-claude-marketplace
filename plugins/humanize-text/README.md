@@ -1,17 +1,17 @@
-# humanizer
+# humanize-text
 
 Rewrite text so it stops sounding AI-generated. Catches inflated significance, promotional language, em-dash overuse, AI vocabulary, bolded-header bullets, and the other patterns that give LLM prose away.
 
 ## Install
 
 ```
-/plugin install humanizer@lorcan-claude-marketplace
+/plugin install humanize-text@lorcan-claude-marketplace
 ```
 
 ## Invoke
 
 ```
-/humanizer
+/humanize-text
 ```
 
 Paste the text inline, or point at a file path. The skill asks what scope it should work on if the request is ambiguous.

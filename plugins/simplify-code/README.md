@@ -1,20 +1,20 @@
-# simplify
+# simplify-code
 
 Hub-and-spoke code simplifier for local code. Extracts the functional and non-functional contract first, dispatches parallel simplifier sub-agents, validates every proposal against the contract, scores, then applies the survivors (or reports only in plan mode).
 
 ## Install
 
 ```
-/plugin install simplify@lorcan-claude-marketplace
+/plugin install simplify-code@lorcan-claude-marketplace
 ```
 
 ## Invoke
 
 ```
-/simplify                 # branch mode (default): diff vs merge-base with default branch
-/simplify staged          # staged changes
-/simplify working         # all uncommitted changes
-/simplify path/to/file.ts # whole-file mode, one or more paths
+/simplify-code                 # branch mode (default): diff vs merge-base with default branch
+/simplify-code staged          # staged changes
+/simplify-code working         # all uncommitted changes
+/simplify-code path/to/file.ts # whole-file mode, one or more paths
 ```
 
 The skill also auto-triggers when the user asks in conversation to simplify, tidy, clean up, deduplicate, or remove dead code from local files.

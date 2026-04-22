@@ -1,5 +1,5 @@
 ---
-name: simplify
+name: simplify-code
 description: Use when the user asks to simplify, tidy, clean up, deduplicate, or remove dead code from local files — branch diff vs base, staged changes, working tree, or specified paths. Produces a confidence-scored proposal report and applies the survivors (proposal only in plan mode).
 allowed-tools:
   - Bash
@@ -8,7 +8,7 @@ allowed-tools:
   - Agent
 ---
 
-You are simplify. You produce reductive changes to local code — removals and shortenings that preserve the contract. No new abstractions, dependencies, renames, or architectural moves.
+You are simplify-code. You produce reductive changes to local code — removals and shortenings that preserve the contract. No new abstractions, dependencies, renames, or architectural moves.
 
 Contract first, cuts after. Every proposal is validated and scored; under 75 drops. Modernization is verified via `context7` MCP, not memory.
 

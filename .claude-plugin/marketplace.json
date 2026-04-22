@@ -7,48 +7,48 @@
   },
   "plugins": [
     {
-      "name": "code-reviewer",
-      "source": "./plugins/code-reviewer",
+      "name": "review-code",
+      "source": "./plugins/review-code",
       "description": "Use when reviewing a local branch diff or a GitHub PR. Produces a local Markdown report with confidence-ranked findings and permalinks. Never posts to GitHub, never mutates files.",
       "author": {
         "name": "Lorcan Chinnock",
         "email": "ljchinnock@gmail.com"
       },
       "category": "productivity",
-      "homepage": "https://github.com/LorcanChinnock/lorcan-claude-marketplace/tree/main/plugins/code-reviewer"
+      "homepage": "https://github.com/LorcanChinnock/lorcan-claude-marketplace/tree/main/plugins/review-code"
     },
     {
-      "name": "simplify",
-      "source": "./plugins/simplify",
+      "name": "simplify-code",
+      "source": "./plugins/simplify-code",
       "description": "Use when the user asks to simplify, tidy, clean up, deduplicate, or remove dead code from local files. Accepts branch diff vs base (default), staged changes, working tree, or specified paths. Produces a confidence-scored proposal report and applies the survivors (proposal only in plan mode).",
       "author": {
         "name": "Lorcan Chinnock",
         "email": "ljchinnock@gmail.com"
       },
       "category": "productivity",
-      "homepage": "https://github.com/LorcanChinnock/lorcan-claude-marketplace/tree/main/plugins/simplify"
+      "homepage": "https://github.com/LorcanChinnock/lorcan-claude-marketplace/tree/main/plugins/simplify-code"
     },
     {
-      "name": "pr-description",
-      "source": "./plugins/pr-description",
+      "name": "describe-pr",
+      "source": "./plugins/describe-pr",
       "description": "Write a conventional-commits title and PR description for the current branch. Reads the raw diff vs base, asks only what the diff cannot answer, enforces humanised prose, and adds a Mermaid diagram where it helps. Never pushes, commits, or opens a PR.",
       "author": {
         "name": "Lorcan Chinnock",
         "email": "ljchinnock@gmail.com"
       },
       "category": "productivity",
-      "homepage": "https://github.com/LorcanChinnock/lorcan-claude-marketplace/tree/main/plugins/pr-description"
+      "homepage": "https://github.com/LorcanChinnock/lorcan-claude-marketplace/tree/main/plugins/describe-pr"
     },
     {
-      "name": "humanizer",
-      "source": "./plugins/humanizer",
+      "name": "humanize-text",
+      "source": "./plugins/humanize-text",
       "description": "Rewrite text to remove signs of AI-generated writing. Catches inflated significance, promotional language, em-dash overuse, AI vocabulary, bolded-header bullets, sycophantic openers, and more. Works on pasted text or files in place.",
       "author": {
         "name": "Lorcan Chinnock",
         "email": "ljchinnock@gmail.com"
       },
       "category": "productivity",
-      "homepage": "https://github.com/LorcanChinnock/lorcan-claude-marketplace/tree/main/plugins/humanizer"
+      "homepage": "https://github.com/LorcanChinnock/lorcan-claude-marketplace/tree/main/plugins/humanize-text"
     },
     {
       "name": "author-plugin",

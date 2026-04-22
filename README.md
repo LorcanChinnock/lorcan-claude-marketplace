@@ -39,9 +39,9 @@ git clone https://github.com/LorcanChinnock/lorcan-claude-marketplace.git
 
 ## Plugins
 
-- [`code-reviewer`](plugins/code-reviewer) — rigorous multi-agent review of a GitHub PR or the current branch's raw diff, with confidence-ranked findings.
-- [`simplify`](plugins/simplify) — hub-and-spoke orchestrator for aggressive-but-safe local code simplification, validated against the extracted contract.
-- [`pr-description`](plugins/pr-description) — generate a conventional-commits title and a structured PR description from the raw diff vs base.
+- [`review-code`](plugins/review-code) — rigorous multi-agent review of a GitHub PR or the current branch's raw diff, with confidence-ranked findings.
+- [`simplify-code`](plugins/simplify-code) — hub-and-spoke orchestrator for aggressive-but-safe local code simplification, validated against the extracted contract.
+- [`describe-pr`](plugins/describe-pr) — generate a conventional-commits title and a structured PR description from the raw diff vs base.
 
 ## Layout
 

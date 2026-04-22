@@ -43,7 +43,7 @@ If SKILL.md is over budget, cut narration. Workflow steps are load-bearing; adje
 
 ## Naming
 
-- **Verb-first kebab-case**: `author-plugin`, `review-code`, `format-dates`, `pr-description`. Not `plugin-authoring`, `code-review`, `date-formatter`.
+- **Verb-first kebab-case**: `author-plugin`, `review-code`, `format-dates`, `describe-pr`. Not `plugin-authoring`, `code-review`, `pr-description`, `date-formatter`.
 - Folders lowercase, hyphenated.
 - Uppercase `.md` only for reference docs (`PATTERNS.md`, `SURFACES.md`, `TEMPLATES.md`, `TDD.md`, `REFERENCE.md`). `SKILL.md` and `README.md` follow that convention too.
 - Match `^[a-z][a-z0-9-]*$`. No camelCase, no underscores, no leading digits.

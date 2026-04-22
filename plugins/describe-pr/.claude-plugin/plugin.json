@@ -1,5 +1,5 @@
 {
-  "name": "pr-description",
+  "name": "describe-pr",
   "version": "0.1.0",
   "description": "Write a conventional-commits title and PR description for the current branch. Reads the raw diff vs base, asks only what the diff cannot answer, enforces humanised prose, and adds a Mermaid diagram where it helps. Never pushes, commits, or opens a PR.",
   "author": {
