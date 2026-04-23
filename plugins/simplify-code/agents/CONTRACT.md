@@ -1,6 +1,6 @@
 # CONTRACT.md — contract-extraction brief
 
-Loaded by step 4 of SKILL.md. Pass this verbatim to a single Sonnet `Agent`, with the scope files and any adjacent tests the step-3 locator returned.
+Loaded by step 4 of the `simplify-code` agent (`agents/simplify-code.md`). Pass this verbatim to a single Sonnet `Agent`, with the scope files and any adjacent tests the step-3 locator returned.
 
 ## Brief (pass verbatim)
 

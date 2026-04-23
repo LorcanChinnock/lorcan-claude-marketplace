@@ -1,6 +1,6 @@
 # simplify-code
 
-Hub-and-spoke code simplifier for local code. Extracts the functional and non-functional contract first, dispatches parallel simplifier sub-agents, validates every proposal against the contract, scores, then applies the survivors (or reports only in plan mode).
+Hub-and-spoke code simplifier for local code. The `/simplify-code` skill is a thin dispatcher; the pipeline runs inside the `simplify-code` agent so its orchestration context stays out of your main conversation. The agent extracts the functional and non-functional contract first, dispatches parallel simplifier sub-agents, validates every proposal against the contract, scores, then applies the survivors (or reports only in plan mode).
 
 ## Install
 
@@ -17,7 +17,7 @@ Hub-and-spoke code simplifier for local code. Extracts the functional and non-fu
 /simplify-code:simplify-code path/to/file.ts # whole-file mode, one or more paths
 ```
 
-The skill also auto-triggers when the user asks in conversation to simplify, tidy, clean up, deduplicate, or remove dead code from local files.
+The skill also auto-triggers when the user asks in conversation to simplify, tidy, clean up, deduplicate, or remove dead code from local files. In either case the skill hands off to the `simplify-code` agent, which runs the pipeline in its own context and returns the report and final status.
 
 ## What it does
 

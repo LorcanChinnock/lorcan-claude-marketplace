@@ -1,6 +1,6 @@
 # SPOKES.md — spoke briefs, validator, scoring, report format
 
-Loaded by steps 5–9 of SKILL.md. Each section below is load-bearing.
+Loaded by steps 5–9 of the `simplify-code` agent (`agents/simplify-code.md`). Each section below is load-bearing.
 
 ## Tier table (step 5 spoke selection)
 

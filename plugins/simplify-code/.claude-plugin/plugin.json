@@ -1,6 +1,6 @@
 {
   "name": "simplify-code",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Use when the user asks to simplify, tidy, clean up, deduplicate, or remove dead code from local files. Accepts branch diff vs base (default), staged changes, working tree, or specified paths. Produces a confidence-scored proposal report and applies the survivors (proposal only in plan mode).",
   "author": {
     "name": "Lorcan Chinnock",
