@@ -23,7 +23,7 @@ Examples:
 Keep the headings exactly as written. Replace each placeholder with real content, or keep the heading with `None.` if truly empty.
 
 ```markdown
-<1–3 sentences in first person, leading with the problem I was solving, then the approach I took. Example shape: "I hit X when Y, so I did Z." Do not write "this PR", "this change", or "the author". The diff shows what changed, this paragraph says why.>
+<1–3 sentences in dropped-subject active voice, leading with the problem being solved, then the approach taken. Example shape: "Hit X when Y, so changed Z." Do not write "I", "this PR", "this change", or "the author". The diff shows what changed, this paragraph says why.>
 
 ## Release note
 <ticket ID + one-line description of the change. Formats, in order of preference:
@@ -33,10 +33,10 @@ Keep the headings exactly as written. Replace each placeholder with real content
 Description is imperative, sentence case, ends with a period. The release note is the user-facing line, not a personal note, so keep it neutral imperative ("Add usage-based pricing.") rather than first person. Do not write "Implemented new feature." as a placeholder — if the user said "just write it" and no ticket is known, write the real one-line description from the diff.>
 
 ## Summary
-<First person, why-led, written as me briefing a reviewer. Open with the problem or constraint that prompted the change. Then say what I considered and rejected, what tradeoff I accepted, and any assumption a reviewer should know about. 2–6 short sentences or a short bulleted list. Do not restate the diff. Do not list files touched. If I cannot say why in one sentence, I have not finished thinking.>
+<Dropped-subject active voice, why-led, written as a brief to a reviewer. Open with the problem or constraint that prompted the change. Then say what was considered and rejected, what tradeoff was accepted, and any assumption a reviewer should know about. 2–6 short sentences or a short bulleted list. Do not restate the diff. Do not list files touched. If the why does not fit in one sentence, the thinking is not done.>
 
 ## Testing steps
-<First person where natural ("I verified X by …", "I ran the suite locally"). Concrete steps a reviewer can run, or a description of automated test coverage I added. If the change is not testable, say why.>
+<Dropped-subject active voice ("Verified X by …", "Ran the suite locally"). Concrete steps a reviewer can run, or a description of automated test coverage added. If the change is not testable, say why.>
 
 ## Feature flag
 <Flag name + default, or "No.">
@@ -66,6 +66,6 @@ Before printing, verify:
 - All five required sections are present in order with exact headings.
 - Optional sections (if any) sit below Follow-up issues, never above.
 - Mermaid block (if present) parses as valid Mermaid and adds information beyond the prose.
-- If I claimed a metric, it is a real number from the conversation, not a placeholder.
+- If a metric is claimed, it is a real number from the conversation, not a placeholder.
 - Release note matches one of the three formats above: ticket-with-link, ticket-only, or plain description. The default "Implemented new feature." placeholder never appears in the output.
-- Lead paragraph and Summary are first person and open with why, not what. Testing uses first person where natural. Release note stays neutral imperative.
+- Lead paragraph and Summary use dropped-subject active voice and open with why, not what. Testing uses dropped-subject active voice. Release note stays neutral imperative. No "I", no "this PR", no "the author" anywhere.

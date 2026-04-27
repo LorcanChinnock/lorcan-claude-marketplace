@@ -24,13 +24,13 @@ Rewrite anything matching these patterns:
 ## Additional style rules
 
 - Lead with why, not what. Motivation first, mechanics second. The diff already shows mechanics — prose that restates them is wasted.
-- First person in narrative sections. Summary and Testing are written as me explaining the change. "I added X because Y." Not "the author", "the developer", "the PR author", or passive voice ("X was added"). Release note and headings stay neutral.
-- Write like a teammate explaining at a desk, not a press release. If I would not say a sentence out loud to a colleague, rewrite it.
+- Dropped-subject active voice in narrative sections. Summary and Testing read as a teammate's spoken brief with the "I" left off. "Added X because Y." Not "I added X because Y", not "the author", "the developer", "the PR author", and not passive voice ("X was added"). Release note and headings stay neutral.
+- Write like a teammate explaining at a desk, not a press release. If a sentence would feel wrong said out loud to a colleague, rewrite it.
 - Every sentence earns its place. If a heading or the diff already says it, do not repeat it in prose.
 - Specific over vague. "p95 dropped from 340ms to 90ms" beats "improves performance".
 - Short sentences. Vary length.
 - Sentence case in prose. Keep template headings exactly as written.
-- Do not write "this PR", "this change", "the author", or "the developer". State what I did and why.
+- Do not write "I", "this PR", "this change", "the author", or "the developer". State what changed and why.
 - No emojis.
 
 ## Style checks
@@ -40,7 +40,7 @@ Before printing, scan the full output for:
 - Zero em dashes.
 - Zero banned AI vocabulary: leverage, seamless, seamlessly, delve, pivotal, showcase, robust, comprehensive, tapestry, interplay, intricate, garner, foster, enhance, crucial, key (as adjective), valuable, underscore, underscores, testament, vibrant, groundbreaking, renowned, boasts.
 - Zero bolded-header bullets (`- **Label:** text`).
-- Zero "this PR", "this change", "the author", or "the developer".
-- Summary and Testing use first person ("I"). No third-person references to whoever wrote the change.
+- Zero "I", "this PR", "this change", "the author", or "the developer".
+- Summary and Testing use dropped-subject active voice. No first-person pronouns, no third-person references to whoever wrote the change, no passive voice ("X was added").
 - Motivation appears before mechanism in the lead sentence and in Summary. The Summary's first sentence is a why-statement, not a what-statement.
-- No sentence I would not say aloud to a teammate.
+- No sentence that would feel wrong said aloud to a teammate.

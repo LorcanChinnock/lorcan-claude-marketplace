@@ -1,6 +1,6 @@
 ---
 name: describe-pr
-description: Use when the user asks for a PR title or description, or runs /describe-pr. Reads raw diff vs base, asks heavily about why the change was made (the diff already shows what and how), then writes a conventional-commits title plus a first-person, fixed-template body (Release note, Summary, Testing, Feature flag, Follow-ups). Prose follows humaniser rules.
+description: Use when the user asks for a PR title or description, or runs /describe-pr. Reads raw diff vs base, asks heavily about why the change was made (the diff already shows what and how), then writes a conventional-commits title plus a fixed-template body (Release note, Summary, Testing, Feature flag, Follow-ups) in dropped-subject active voice. Prose follows humaniser rules.
 allowed-tools:
   - Bash
   - Read
@@ -43,12 +43,12 @@ gh pr view --json number,title,body,url,baseRefName 2>/dev/null
 
 Note uncommitted changes once. Describe what is committed.
 
-### 2. Separate what the diff shows from what only I know
+### 2. Separate what the diff shows from what only the author knows
 
 The diff already shows what changed and how. Do not restate it. The job here is to find the smallest set of things the diff cannot show, so step 3 can ask for them.
 
 - **Diff shows (do not ask)**: files touched, APIs added or removed, schema changes, config flags introduced, tests added, dependencies changed. Also scan the branch name for a ticket ID of shape `[A-Z]+-\d+` (e.g. `GX-24525`, `ABC-123`) — if found, carry it into the release note. If the user's instructions (e.g. a project or global `CLAUDE.md`) give an issue-tracker base URL, build a link; otherwise keep the bare ticket ID.
-- **Only I know (must ask)**: why this change exists, what problem prompted it, what alternatives I considered and rejected, what constraints shaped the approach, rollout plan, feature-flag state, real perf numbers, follow-up work, and the ticket ID when the branch carries none.
+- **Only the author knows (must ask)**: why this change exists, what problem prompted it, what alternatives were considered and rejected, what constraints shaped the approach, rollout plan, feature-flag state, real perf numbers, follow-up work, and the ticket ID when the branch carries none.
 
 Do not invent unknowns. Do not guess motivation from file names.
 
@@ -76,7 +76,7 @@ Skip questions the diff already answers. If the user replies "just write it", pr
 
 Read [TEMPLATE.md](TEMPLATE.md) for title format, required sections, and Mermaid guidance. Read [STYLE.md](STYLE.md) for prose rules. Output must pass every check in both.
 
-Voice: write Summary and Testing in first person, as me explaining the change to a teammate at the desk. "I added X because Y." Not "the author added X" or "this PR adds X". Release note and headings stay neutral.
+Voice: write Summary and Testing in dropped-subject active voice. "Added X because Y." Not "I added X because Y", not "the author added X", and not "this PR adds X". Drop the explicit subject, keep active verbs, lead with motivation. Release note and headings stay neutral.
 
 Print in this order:
 
