@@ -23,17 +23,17 @@
       "keywords": ["pull-request", "git", "conventional-commits", "documentation", "mermaid"]
     },
     {
-      "name": "humanize-text",
-      "source": "./plugins/humanize-text",
-      "description": "Rewrite text to remove signs of AI-generated writing. Catches inflated significance, promotional language, em-dash overuse, AI vocabulary, bolded-header bullets, sycophantic openers, and more. Works on pasted text or files in place.",
+      "name": "humanize",
+      "source": "./plugins/humanize",
+      "description": "Rewrite text and code to remove signs of AI-generated writing. Prose skill catches inflated significance, promotional language, em-dash overuse, AI vocabulary, bolded-header bullets, and sycophantic openers. Code skill renames verbose identifiers, simplifies comments and docstrings, and cleans up log / error / user-facing strings for non-native English readers.",
       "author": {
         "name": "Lorcan Chinnock",
         "email": "ljchinnock@gmail.com"
       },
-      "homepage": "https://github.com/LorcanChinnock/lorcan-claude-marketplace/tree/main/plugins/humanize-text",
+      "homepage": "https://github.com/LorcanChinnock/lorcan-claude-marketplace/tree/main/plugins/humanize",
       "license": "MIT",
       "category": "writing",
-      "keywords": ["writing", "editing", "prose", "ai-detection"]
+      "keywords": ["writing", "editing", "prose", "ai-detection", "code", "naming", "readability"]
     },
     {
       "name": "handle-review",

@@ -40,7 +40,7 @@ git clone https://github.com/LorcanChinnock/lorcan-claude-marketplace.git
 ## Plugins
 
 - [`describe-pr`](plugins/describe-pr) — write a conventional-commits title and PR description for the current branch from the raw diff vs base. Never pushes, commits, or opens a PR.
-- [`humanize-text`](plugins/humanize-text) — rewrite text to remove signs of AI-generated writing: inflated significance, promotional language, em-dash overuse, AI vocabulary, bolded-header bullets, sycophantic openers.
+- [`humanize`](plugins/humanize) — rewrite text and code to remove signs of AI-generated writing. Prose skill (`humanize-text`) handles inflated significance, promotional language, em-dash overuse, AI vocabulary, bolded-header bullets, sycophantic openers. Code skill (`humanize-code`) renames verbose identifiers, simplifies comments and docstrings, and cleans up log / error / user-facing strings for non-native English readers.
 - [`handle-review`](plugins/handle-review) — structured workflow for responding to code review or other critical feedback. Enforces verify-before-implement, reasoned push-back, one-item-at-a-time execution, and no performative agreement.
 - [`tech-docs`](plugins/tech-docs) — write technical docs (architecture overviews, feature designs, runbooks, getting-started guides, READMEs, tech-debt notes, how-tos, implementation plans, RFCs, and more). Asks the doc type and audience first, runs targeted clarifying questions one at a time, then drafts in plain language with structured markdown and pastel mermaid diagrams where they help. Output is humanised.
 
